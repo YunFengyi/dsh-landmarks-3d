@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f3e9" />
+      <stop offset="1" stop-color="#e6dbc7" />
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9cbb2" />
+      <stop offset="1" stop-color="#c3b399" />
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f4e4c0" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#f4e4c0" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="300" fill="url(#sky)" />
+  <circle cx="524" cy="76" r="70" fill="url(#sun)" />
+  <circle cx="524" cy="76" r="21" fill="#f1ddaa" opacity="0.75" />
+  <rect x="0" y="252" width="640" height="48" fill="url(#ground)" />
+
+  <!-- Eiffel Tower -->
+  <ellipse cx="100" cy="253" rx="54" ry="5" fill="#3f3527" opacity="0.10" />
+  <path fill-rule="evenodd" fill="#3f3527" d="M100 50 L102.6 62 L104.1 88.8 L107 117.6 L111.5 146.4 L117.9 175.2 L125.6 204 L134.9 232.8 L142 252 L58 252 L65.1 232.8 L74.4 204 L82.1 175.2 L88.5 146.4 L93 117.6 L95.9 88.8 L97.4 62 Z M78 252 A22 22 0 0 1 122 252 Z" />
+  <rect x="66" y="214" width="68" height="5" fill="#3f3527" />
+  <rect x="77" y="179" width="46" height="4.5" fill="#3f3527" />
+  <rect x="93" y="80" width="14" height="3.5" fill="#3f3527" />
+
+  <!-- Great Wall -->
+  <ellipse cx="240" cy="253" rx="96" ry="5" fill="#3f3527" opacity="0.08" />
+  <path fill="#c0af93" d="M132 252 C 168 240 196 214 236 206 C 276 198 306 220 348 252 Z" />
+  <path fill="none" stroke="#3f3527" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" d="M142 250 L170 232 L196 236 L224 214 L252 220 L280 202 L308 210 L334 236" />
+  <rect x="188" y="212" width="17" height="25" fill="#3f3527" />
+  <rect x="188" y="205" width="6" height="7" fill="#3f3527" />
+  <rect x="199" y="205" width="6" height="7" fill="#3f3527" />
+  <rect x="272" y="181" width="17" height="24" fill="#3f3527" />
+  <rect x="272" y="174" width="6" height="7" fill="#3f3527" />
+  <rect x="283" y="174" width="6" height="7" fill="#3f3527" />
+
+  <!-- Forbidden City -->
+  <ellipse cx="390" cy="253" rx="66" ry="5" fill="#3f3527" opacity="0.10" />
+  <rect x="326" y="236" width="128" height="16" fill="#d9cdb6" />
+  <rect x="332" y="230" width="116" height="6" fill="#cfc2a8" />
+  <rect x="346" y="196" width="88" height="34" fill="#9c3f33" />
+  <rect x="354" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="368" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="382" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="395" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="409" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="423" y="200" width="3" height="30" fill="#7d2f26" />
+  <rect x="376" y="206" width="28" height="24" fill="#c9a13c" />
+  <path fill="#cfa53c" d="M330 201 C 340 196 350 191 360 185 L 372 173 L 408 173 L 420 185 C 430 191 440 196 450 201 L 448 207 C 438 201 428 197 416 193 L 410 185 L 370 185 L 364 193 C 352 197 342 201 332 207 Z" />
+  <rect x="370" y="167" width="40" height="6" fill="#cfa53c" />
+
+  <!-- Colosseum -->
+  <ellipse cx="540" cy="253" rx="68" ry="5" fill="#3f3527" opacity="0.10" />
+  <path fill-rule="evenodd" fill="#3f3527" d="M478 252 V168 A 62 26 0 0 1 602 168 V252 Z
+    M486 228 V219 A 7 7 0 0 1 500 219 V228 Z
+    M504 228 V219 A 7 7 0 0 1 518 219 V228 Z
+    M522 228 V219 A 7 7 0 0 1 536 219 V228 Z
+    M540 228 V219 A 7 7 0 0 1 554 219 V228 Z
+    M558 228 V219 A 7 7 0 0 1 572 219 V228 Z
+    M576 228 V219 A 7 7 0 0 1 590 219 V228 Z
+    M486 204 V195 A 7 7 0 0 1 500 195 V204 Z
+    M504 204 V195 A 7 7 0 0 1 518 195 V204 Z
+    M522 204 V195 A 7 7 0 0 1 536 195 V204 Z
+    M540 204 V195 A 7 7 0 0 1 554 195 V204 Z
+    M558 204 V195 A 7 7 0 0 1 572 195 V204 Z
+    M576 204 V195 A 7 7 0 0 1 590 195 V204 Z
+    M486 180 V171 A 7 7 0 0 1 500 171 V180 Z
+    M504 180 V171 A 7 7 0 0 1 518 171 V180 Z
+    M522 180 V171 A 7 7 0 0 1 536 171 V180 Z
+    M540 180 V171 A 7 7 0 0 1 554 171 V180 Z
+    M558 180 V171 A 7 7 0 0 1 572 171 V180 Z
+    M576 180 V171 A 7 7 0 0 1 590 171 V180 Z" />
+</svg>

@@ -1,0 +1,7 @@
+# Bundle patch layer: the row loads this package's main entry as the host half
+# (a plain Cordis plugin with an empty apply()); the `dsh.client` declaration in
+# package.json makes the web app load ./client.js as the browser half, where the
+# sidebar entry and the 3D panel are registered.
+- insert:
+    - id: landmarks-3d
+      name: dsh-landmarks-3d
