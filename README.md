@@ -5,7 +5,10 @@ English · [简体中文](README.zh.md)
 A DeepSeek Harness plugin. It adds one entry to the left sidebar; the entry opens a full
 page with four world landmarks rendered as interactive 3D models.
 
-![Four world landmarks: the Eiffel Tower, the Great Wall, the Forbidden City and the Roman Colosseum](docs/preview.svg)
+![The plugin panel in a DeepSeek Harness: the Eiffel Tower model on the dark theme, four landmark
+tabs above the stage, facts in the right rail](docs/screenshot.png)
+
+Rendered live in the panel — the dark theme shown here; the light theme is equally supported.
 
 | Landmark | Location |
 | --- | --- |
@@ -112,6 +115,7 @@ locale/en.json      plugin manager metadata (English)
 locale/zh.json      plugin manager metadata (Chinese)
 docs/DETAIL.md      plugin detail page (English)
 docs/DETAIL.zh.md   plugin detail page (Chinese)
+docs/screenshot.png README hero: a real render of the panel
 docs/preview.svg    preview illustration used by the detail page
 ```
 

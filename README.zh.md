@@ -4,7 +4,9 @@
 
 一个 DeepSeek Harness 插件。它在左侧边栏新增一个入口，点开后是一整页，用可交互的 3D 模型展示四座世界地标。
 
-![四座世界地标：埃菲尔铁塔、万里长城、紫禁城、罗马斗兽场](docs/preview.svg)
+![插件在 DeepSeek Harness 里的实际渲染：深色主题下的埃菲尔铁塔模型，上方四个地标标签，右侧是资料栏](docs/screenshot.png)
+
+在面板里实时渲染。上图是深色主题，浅色主题同样适配。
 
 | 地标 | 位置 |
 | --- | --- |
@@ -98,6 +100,7 @@ locale/en.json      插件管理器元数据（英文）
 locale/zh.json      插件管理器元数据（中文）
 docs/DETAIL.md      插件详情页（英文）
 docs/DETAIL.zh.md   插件详情页（中文）
+docs/screenshot.png README 首图（面板真实渲染）
 docs/preview.svg    详情页用的预览插图
 ```
 
