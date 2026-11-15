@@ -1,9 +1,11 @@
 # dsh-landmarks-3d
 
-A DeepSeek Harness plugin. It adds one entry to the left sidebar; the entry opens a
-full page with four world landmarks rendered as interactive 3D models.
+English · [简体中文](README.zh.md)
 
-![Four world landmarks rendered in 3D](docs/preview.svg)
+A DeepSeek Harness plugin. It adds one entry to the left sidebar; the entry opens a full
+page with four world landmarks rendered as interactive 3D models.
+
+![Four world landmarks: the Eiffel Tower, the Great Wall, the Forbidden City and the Roman Colosseum](docs/preview.svg)
 
 | Landmark | Location |
 | --- | --- |
@@ -41,6 +43,63 @@ Each model is generated from a parametric description rather than loaded from a 
   a stepped cavea, and a collapsed sector of the outer ring — about a third of it — so
   the ruin reads as a ruin.
 
+## Install into a DeepSeek Harness
+
+**Requirements**: DeepSeek Harness with the web client (the plugin targets the
+`sidebar.panellist` and `main` slots) and a WebGL-capable renderer. Nothing else — the
+bundle has no dependencies and no build step, so it installs offline.
+
+### 1. Get the plugin onto the machine
+
+The plugin is a directory bundle, so DSH installs it from a folder, not from npm:
+
+```bash
+git clone https://github.com/YunFengyi/dsh-landmarks-3d.git
+```
+
+Downloading **Code → Download ZIP** from the repository page and unpacking it works the
+same way.
+
+### 2. Install it
+
+Two ways, same result: it installs into the current profile, applies to every session,
+and survives a restart.
+
+- **From the Web UI** — open **Plugins** in the left sidebar, choose **Add plugin**, and
+  select the cloned `dsh-landmarks-3d` folder. This entry installs a local directory.
+- **From a session** — give the absolute path to the agent, e.g. "install the plugin at
+  `D:\code\dsh-landmarks-3d`". It runs `plugin_manager` `action: install_bundle` with
+  that directory as `target`.
+
+### 3. Reload the page once
+
+The rendering half is a client module, so the Harness page has to load again. The left
+sidebar gains an icon — a small Eiffel Tower, ordered after the built-in panels — and
+clicking it opens the page.
+
+If the icon does not appear, open **Plugins**, make sure the `dsh-landmarks-3d` row is
+enabled, and reload once more.
+
+### Update and remove
+
+```bash
+cd dsh-landmarks-3d && git pull   # then reload the page
+```
+
+To remove it: in **Plugins**, delete the `dsh-landmarks-3d` row; or have the agent call
+`plugin_manager` `action: remove_bundle` with `target: dsh-landmarks-3d`.
+
+## Controls
+
+| Action | Input |
+| --- | --- |
+| Orbit | drag with the pointer |
+| Zoom | wheel, two-finger pinch, or `+` / `-` with the canvas focused |
+| Rotate with keys | arrow keys with the canvas focused |
+| Reset camera | double-click, or the "Reset view" pill |
+| Stop auto-rotation | the "Auto-rotate" pill |
+| Recover from a WebGL failure | the message inside the stage says so; the tabs stay inert |
+
 ## Files
 
 ```
@@ -56,28 +115,12 @@ docs/DETAIL.zh.md   plugin detail page (Chinese)
 docs/preview.svg    preview illustration used by the detail page
 ```
 
-## Requirements
+## Notes
 
-- DeepSeek Harness with the web client (the plugin targets the `sidebar.panellist` and
-  `main` slots).
-- A WebGL-capable renderer; without one the panel shows a message instead of a canvas.
-
-## Install
-
-```
-plugin_manager action: install_bundle target: <this directory>
-```
-
-After installing, refresh the page once so the client half loads: the sidebar gains an
-icon (a small Eiffel Tower) that opens the panel.
-
-## Controls
-
-| Action | Input |
-| --- | --- |
-| Orbit | drag with the pointer |
-| Zoom | wheel, two-finger pinch, or `+` / `-` with the canvas focused |
-| Rotate with keys | arrow keys with the canvas focused |
-| Reset camera | double-click, or the "Reset view" pill |
-| Stop auto-rotation | the "Auto-rotate" pill |
-| Recover from a WebGL failure | the message inside the stage says so; the tabs stay inert |
+- No runtime dependencies: `client.js` uses only the built-in `React` and `ctx` handed to
+  a client module. It imports no Harness client package and touches no network.
+- The camera fit is derived from each model's bounding box, including the near-corner
+  perspective correction, so a 48-unit-wide Great Wall and a 21-unit-tall Eiffel Tower
+  both frame themselves without hand-tuned numbers.
+- Known limits: WebGL is required; the geometry is illustrative rather than surveyed; and
+  touch zoom needs two fingers.

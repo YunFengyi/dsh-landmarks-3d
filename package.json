@@ -1,6 +1,6 @@
 {
   "name": "dsh-landmarks-3d",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "A DeepSeek Harness plugin that renders four world landmarks as interactive 3D models in their own sidebar panel.",
   "type": "module",
@@ -21,7 +21,9 @@
     "icon.svg",
     "locale/*.json",
     "docs",
-    "README.md"
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
   ],
   "keywords": [
     "deepseek-harness",
