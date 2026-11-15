@@ -21,8 +21,10 @@
     "icon.svg",
     "locale/*.json",
     "docs",
+    "test",
     "README.md",
     "README.zh.md",
+    "CONTRIBUTING.md",
     "LICENSE"
   ],
   "keywords": [
@@ -44,5 +46,8 @@
         "@deepseek-ai/dsh-client-ui-conversation"
       ]
     }
+  },
+  "scripts": {
+    "test": "node test/verify-panel.mjs && node test/verify-geometry.mjs"
   }
 }

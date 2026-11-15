@@ -117,7 +117,25 @@ docs/DETAIL.md      plugin detail page (English)
 docs/DETAIL.zh.md   plugin detail page (Chinese)
 docs/screenshot.png README hero: a real render of the panel
 docs/preview.svg    preview illustration used by the detail page
+test/verify-panel.mjs     static check: slots, locale keys, a11y, CSS coverage
+test/verify-geometry.mjs  model geometry, real-world proportions, camera fit
+CONTRIBUTING.md     commit format, branch names, how to run the checks
 ```
+
+## Tests
+
+No browser and no dependencies — both checks read `client.js` as text, or rebuild the models
+in Node and project them through the same matrices the renderer uses:
+
+```
+npm test
+```
+
+`verify-panel.mjs` loads the module through a fake `__ModuleLoader__`, calls `apply()` with a
+recording `ctx`, and asserts the two slot registrations share one id, that the `<style>` is
+mounted, every `t()` key resolves in both languages, and every rendered className has a rule.
+`verify-geometry.mjs` builds the four models, then checks triangle data, proportions against
+the real buildings, and that the fitted camera keeps the whole model inside the frustum.
 
 ## Notes
 

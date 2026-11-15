@@ -102,7 +102,24 @@ docs/DETAIL.md      插件详情页（英文）
 docs/DETAIL.zh.md   插件详情页（中文）
 docs/screenshot.png README 首图（面板真实渲染）
 docs/preview.svg    详情页用的预览插图
+test/verify-panel.mjs     静态校验：槽位、翻译 key、可访问性、样式覆盖
+test/verify-geometry.mjs  模型几何、真实比例、取景是否框得下
+CONTRIBUTING.md     提交格式、分支命名、怎么跑校验
 ```
+
+## 测试
+
+不需要浏览器，也不需要装依赖——两个脚本要么把 `client.js` 当文本读，要么在 Node 里把模型
+重新建出来，再用渲染器那套矩阵做投影：
+
+```
+npm test
+```
+
+`verify-panel.mjs` 用假的 `__ModuleLoader__` 加载模块，拿可记录的 `ctx` 调 `apply()`，
+断言两处槽位注册共用同一个 id、`<style>` 已挂载、每个 `t()` key 在中英两种语言里都能解析、
+每个渲染出来的 className 都有对应样式。`verify-geometry.mjs` 建出四个模型，检查三角形数据、
+与真实建筑的比例，并确认自动取景把整座模型框在视野内。
 
 ## 技术说明
 
